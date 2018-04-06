@@ -20,10 +20,10 @@ usage:
         ssadmin.sh add port passwd limit
             port: port number, 0<port<=65535
             passwd: password, Cannot have spaces, quotation marks, etc.
-            limit：data limitation, Can use K/M/G/T, KB/MB/GB/TB, etc.(No case-sensitive). 
+            limit: data limitation, Can use K/M/G/T, KB/MB/GB/TB, etc.(No case-sensitive). 
                    Supports decimals. For example, 10.5G, 10.5GB, etc.
                    1KB=1024 bytes.
-        Example： ssadmin.sh add 3333 abcde 10.5G
+        Example: ssadmin.sh add 3333 abcde 10.5G
     show user data infomation:
         ssadmin.sh show port
     show all user data infomation
@@ -36,7 +36,7 @@ usage:
         ssadmin.sh del port
     modify user:
         ssadmin.sh change port passwd limit
-    modify user password：
+    modify user password:
         ssadmin.sh cpw port passwd
     modify user data limitation:
         ssadmin.sh clim port limit
