@@ -1,53 +1,54 @@
-用法：
-    显示版本：
+usage:
+    show version:
         ssadmin.sh -v|v|version
-    显示帮助：
+    show help:
         ssadmin.sh [-h|h|help]
-    启动ss:
+    start ss:
         ssadmin.sh start
-    停止ss：
+    stop ss:
         ssadmin.sh stop
-    查看ss状态：
+    check ss status:
         ssadmin.sh status
-    重启ss：
+    restart ss:
         ssadmin.sh restart
-    软重启ss：
+    soft_restart ss:
         ssadmin.sh soft_restart
-        在不影响现有连接的情况下重启ss服务。用于ss服务参数修改，
-        和手动直接修改配置文件后，重启ss服务。
-    添加用户：
+        
+        Restart ss service without affecting existing connections. Used for ss service parameter modification,
+        And manually modify the configuration file, restart ss service.
+    add user:
         ssadmin.sh add port passwd limit
-            port：端口号, 0<port<=65535
-            passwd：密码, 不能有空格，引号等字符
-            limit：流量限制，可以用K/M/G/T、KB/MB/GB/TB等（不区
-                   分大小写）。支持小数。比如10.5G、10.5GB等。
-                   1KB=1024 bytes，以此类推。
-        示例： ssadmin.sh add 3333 abcde 10.5G
-    显示用户流量信息：
+            port: port number, 0<port<=65535
+            passwd: password, Cannot have spaces, quotation marks, etc.
+            limit：data limitation, Can use K/M/G/T, KB/MB/GB/TB, etc.(No case-sensitive). 
+                   Supports decimals. For example, 10.5G, 10.5GB, etc.
+                   1KB=1024 bytes.
+        Example： ssadmin.sh add 3333 abcde 10.5G
+    show user data infomation:
         ssadmin.sh show port
-    显示所有用户流量信息：
+    show all user data infomation
         ssadmin.sh show
-    显示用户密码信息：
+    show user password infomation:
         ssadmin.sh showpw port
-    显示所有用户密码信息：
+    show all user password infomation:
         ssadmin.sh showpw
-    删除用户：
+    delete user:
         ssadmin.sh del port
-    修改用户：
+    modify user:
         ssadmin.sh change port passwd limit
-    修改用户密码：
+    modify user password：
         ssadmin.sh cpw port passwd
-    修改用户流量限制：
+    modify user data limitation:
         ssadmin.sh clim port limit
-    修改所有用户流量限制：
+    modify all user data limitation:
         ssadmin.sh change_all_limit limit
-    用户流量使用量置零：
+    user data usage reset:
         ssadmin.sh rused limit
-    所有用户流量使用量置零：
+    all user data usage reset:
         ssadmin.sh reset_all_used
-    用户流量限制置零：
+    user data limitation clear:
         ssadmin.sh rlim port
-    全部用户流量限制置零：
+    all user data limitation clear:
         ssadmin.sh reset_all_limit
-    显示已添加的iptables规则：
+    show added iptables rules：
         ssadmin.sh lrules
