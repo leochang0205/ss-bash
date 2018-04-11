@@ -232,7 +232,7 @@ add_user () {
         echo "\
 $PORT $PWORD $TLIMIT" >> $USER_FILE;
     else
-        echo "用户已存在!"
+        echo "User already exist!"
         return 1
     fi
 # 重新生成配置文件，并加载
