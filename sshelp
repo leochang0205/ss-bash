@@ -50,5 +50,5 @@ usage:
         ssadmin.sh rlim port
     all user data limitation clear:
         ssadmin.sh reset_all_limit
-    show added iptables rules：
+    show added iptables rules:
         ssadmin.sh lrules
